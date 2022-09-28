@@ -1,0 +1,487 @@
+<!DOCTYPE html><html><head>
+      <title>test_markdown</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/youngsu/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.3/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <center>
+<h2><b> REU Past Student&apos;s Work </b></h2>
+</center>
+<p>Each participant in our program produces a paper describing their results.  As the program is only eight weeks long, participants don&apos;t have much time to revise and polish their papers.  When viewing the papers below, please keep in mind that they are not intended to be final versions, but are works in progress.</p>
+<p>The students have worked hard to produce these results, and have done a great job!  The research represented by these papers was made possible by NSF-REU grants DMS-9987955, DMS-0139426, DMS-0453605, DMS-0850959, DMS-1156608, DMS-1461286, DMS-1758020 as well as the generous support of California State University, San Bernardino.</p>
+<p>Below are some of the papers from each of the topics we have studied: Geometry, and Knot Theory. Although combinatorics is not necessarily one of the topics we still offer as part of this REU, we list the work of our former participants in that field as well.</p>
+<p><strong>Summer 2022 Geometry Projects</strong></p>
+<p>Kernels of Algebraic Curvature Tensors of Mixed Symmetric and Skew-Symmetric Build, by  <a href="./papers/2022/Basia22.pdf">Basia Klos</a></p>
+<p>Structure Groups of Algebraic Curvature Tensors Containing Rotation Actions, by  <a href="./papers/2022/JeffreyNubla22.pdf">Jeffrey Nubla</a></p>
+<p>Decomposability and Linear Independence of Canonical Algebraic Curvature Tensors Expressed Through Chain Complexes Over Pseudo-Euclidean Vector Spaces, by  <a href="./papers/2022/Tommy22.pdf">Tommy Zamroz</a></p>
+<p>On the Construction of Canonical Algebraic Curvature Tensors Using a Chosen Rank, by  <a href="./papers/2022/Callie22.pdf">Callie Reimann</a></p>
+<p><strong>Summer 2022 Knot Theory Projects</strong></p>
+<p>All Links are Sublinks of Cuboctahedral Arithmetic Links, by  <a href="./papers/2022/Luisa22.pdf">Luisa Boateng </a></p>
+<p>Supercoiled DNA Tangles and Stick Number of Montesinos Links, by  <a href="./papers/2022/Armando22.pdf">Armando Felix </a></p>
+<p>Categorizing Embedded Totally Geodesic Surfaces Within Chain Links, by  <a href="./papers/2022/Earley22.pdf">Amy Earley </a></p>
+<p>On Characterizing Cuboctahedral Fully Augmented Links, by  <a href="./papers/2022/Emerson22.pdf">Emerson Worrell </a></p>
+<p><strong>Summer 2021 Geometry Projects</strong></p>
+<p>G-Modeling and Warped Product Curvature Models, by  <a href="./papers/2021/Chi21.pdf">Rasiel Chishti</a></p>
+<p>Linear Dependence of Canonical Algebraic Curvature Tensors as Described by Weighted Directed Graphs, by  <a href="./papers/2021/Jul21.pdf">Shira Julie</a></p>
+<p>Constructing Spanning Sets of Affine Algebraic Curvature Tensors, by  <a href="./papers/2021/Kel21.pdf">Stephen Kelly</a></p>
+<p><strong>Summer 2021 Knot Theory Projects</strong></p>
+<p>Using the Crushtaceans of Fully Augmented Links to Investigate Cheeger Constants, by  <a href="./papers/2021/Bau21.pdf">Audrey Baumheckel</a></p>
+<p>On the Classification of Belted Sum Decomposition of Nested Links, by  <a href="./papers/2021/Cast21.pdf">Brandon Castillo</a></p>
+<p>Method to Generate b-Prime Fully Augmented Links, by  <a href="./papers/2021/Mork21.pdf">Leah Mork</a></p>
+<p>On the Arithmeticity of FALs, by  <a href="./papers/2021/Mills21.pdf">Sadie Mills</a></p>
+<p><strong>Summer 2020 Geometry Projects</strong></p>
+<p>An Examination of Linear Combinations of Skew-Adjoint Build Algebraic Curvature Tensors, by  <a href="./papers/2020/Brundan20.pdf">Joey Brundan</a></p>
+<p>k-Plane Scalar Curvature and Structure Groups of Model Spaces, by  <a href="./papers/2020/Kelley20.pdf">Preston Kelley</a></p>
+<p>On the geometric realization of irreducible manifolds by decomposable model spaces, by  <a href="./papers/2020/McMenomy20.pdf">Charlie McMenomy</a></p>
+<p>Assessing the Geometric Realizations of Hermitian Manifolds, by  <a href="./papers/2020/Pryor20.pdf">Frank Pryor</a></p>
+<p>Algebraic Requirements for k-Curvature Homogeneous Spaces, by  <a href="./papers/2020/Smith20.pdf">Zo&#xEB; Smith</a></p>
+<p><strong>Summer 2020 Knot Theory Projects</strong></p>
+<p>Nested Links, Linking Matrices, and Crushtaceans, by  <a href="./papers/2020/Brown20.pdf">Madeline Brown</a></p>
+<p>Topological Realizations of Fully Augmented Links and Polyhedral Partners, by  <a href="./papers/2020/Cenek20.pdf">Lisa Cenek</a></p>
+<p>Crushtaceans and Complements of Fully Augmented and Nested Links, by  <a href="./papers/2020/Zevenbergen20.pdf">Matty Zevenbergen</a></p>
+<p><strong>Summer 2019 Geometry Projects</strong></p>
+<p>General Curvature Homogeneity Theories, by  <a href="./papers/2019/Luna19.pdf">Alex Luna</a></p>
+<p>Canonical Expressions of Algebraic Curvature Tensors, by <a href="./papers/2019/Ragosta19.pdf">Katie Ragosta</a></p>
+<p>Linear Independence of Algebraic Curvature Tensors in the Higher-Signature Setting, by <a href="./papers/2019/Tripp19.pdf">Chris Tripp</a></p>
+<p>Decomposable Model Spaces and a Topological Approach to Curvature, by <a href="./papers/2019/Tully19.pdf">Kevin Tully</a></p>
+<p>A Method to Finding Invariants Using Sectional Curvature, by <a href="./papers/2019/Williams19.pdf">Montana Williams</a></p>
+<p><strong>Summer 2019 Knot Theory Projects</strong></p>
+<p>Belted Sum Decompositions in Nested Links, by <a href="./papers/2019/Howard19.pdf">Maddy Howard</a></p>
+<p>Volume Bounds for Trivalent Planar Graphs, by <a href="./papers/2019/Koh19.pdf">Anita Koh</a></p>
+<p>Embedded Totally Geodesic Surfaces in Fully Augmented Link Complements, by <a href="./papers/2019/Knavel19.pdf">Sierra Knavel</a></p>
+<p><strong>Summer 2018 Geometry Projects</strong><br>
+Covariant Derivative Lengths in Curvature Homogeneous Manifolds, by  <a href="./papers/2018/Gabby18.pdf">Gabby Konyndyk</a></p>
+<p>An upper bound on \eta(n), by  <a href="./papers/2018/Lopez18.pdf">Gabe Lopez</a></p>
+<p>Putting the &quot;k&quot; in Curvature:  k-Plane Constant Curvature Conditions, by  <a href="./papers/2018/Calle18.pdf">Maxine Calle</a></p>
+<p><strong>Summer 2018 Knot Theory Projects</strong><br>
+Systole Length and Preservation Under Belt-Sums of the Borromean Rings, by  <a href="./papers/2018/Cowell18.pdf">Amanda Cowell</a></p>
+<p>Factorization of Fully Augmented Links via Belted Sum Decomposition, by  <a href="./papers/2018/Ransom18.pdf">Brian Ransom</a></p>
+<p>Volume Bounds of T-links, by  <a href="./papers/2018/Klaib18.pdf">Maya Klaib</a></p>
+<p>Geometric Exploration of T-Links using Lorenz Link Correspondence, by  <a href="./papers/2018/Rhoades18.pdf">Ryan Rhoades</a></p>
+<p>Generalized Cell Decompositions of Nested Lorenz Links, by  <a href="./papers/2018/Coenen18.pdf">Wil Coenen</a></p>
+<p><strong>Summer 2017 Geometry Projects</strong></p>
+<p>Constant Vector Curvature for Skew-Adjoint Linear Transformations , by  <a href="./papers/2017/Beveridge2017.pdf">Mack Beveridge</a></p>
+<p>A complete description of constant vector curvature in the 3-dimensional setting , by  <a href="./papers/2017/LR2017.pdf">Andrew Lavengood-Ryan</a></p>
+<p>Algebraic curvature tensors of Einstein and weakly Einstein model spaces, by  <a href="./papers/2017/Shapiro2017.pdf">Roberta Shapiro</a></p>
+<p><strong>Summer 2017 Knot Theory Projects</strong></p>
+<p>Belted sum decomposition of fully augmented links, by  <a href="./papers/2017/BeltSummers2017.pdf">Porter Morgan, Dean Spyropoulos, Cameron Ziegler (the &quot;Belt Summers&quot;)</a></p>
+<p>Geometrically realizing nested torus links, by  <a href="./papers/2017/Bray2017.pdf">Amie Bray</a></p>
+<p>Analysis of length spectra of geodesics in the knot complement of the Borromean Rings, by  <a href="./papers/2017/Neal2017.pdf">Kayla Neal</a></p>
+<p><strong>Summer 2016 Geometry Projects</strong></p>
+<p>Constant Vector Curvature in 3-Dimensional Lorentzian Space with Diagonalized Ricci Tensor , by  <a href="./papers/2016/Dok16.pdf">Ana Doktorova</a></p>
+<p>1-Homothety Curvature Homogeneity and 1-Curvature Homogeneity, by  <a href="./papers/2016/MH16.pdf">Rory Martin-Hagemeyer</a></p>
+<p>A Generalization of Various Theories of Curvature Homogeneity, by  <a href="./papers/2016/Sbiti16.pdf">Sammy Sbiti</a></p>
+<p><strong>Summer 2016 Knot Theory Projects</strong></p>
+<p>Cusp Density in Nested Octahedral Links, by  <a href="./papers/2016/Angeloro16.pdf">Gabrielle Angeloro</a></p>
+<p>Nested and Fully Augmented Links, by  <a href="./papers/2016/Olson16.pdf">Hayley Olson</a></p>
+<p>Iterative Extension on Volume Altering Hyperbolic Tangle Surgeries, by  <a href="./papers/2016/Everham16.pdf">Lucas Everham</a></p>
+<p>Volume Preserving Surgeries on Hyperbolic 3-Manifolds, by  <a href="./papers/2016/Rudzis16.pdf">Peter Rudzis</a></p>
+<p>Volume Comparison of 3-Braided Links with Dehn Fillings, by  <a href="./papers/2016/Vega16.pdf">Vanessa Vega</a></p>
+<p><strong>Summer 2015 Geometry Projects</strong></p>
+<p>Curvature Homogeneous Types in Generlized Dunn Manifolds , by  <a href="./papers/2015/Winney15.pdf">Daniel Winney</a></p>
+<p>The Study of the Constant Vector Curvature Curvature Condition for Model Spaces of Three Dimensions in the Lorentzian Setting , by <a href="./papers/2015/Peng15.pdf">Angela Peng</a></p>
+<p>Structure Groups and Linear Transformations , by  <a href="./papers/2015/Elderfield15.pdf">Darien Elderfield</a></p>
+<p>Linear Dependence of Canonical Algebraic Curvature Tensors with Associated Chain Complexes, by <a href="./papers/2015/Williams15.pdf">David Williams</a></p>
+<p>Linear Dependence in Sets of Three Canonical Algebraic Curvature Tensors, by <a href="./papers/2015/Ye15.pdf">Susan Ye</a></p>
+<p><strong>Summer 2015 Knot Theory Projects</strong></p>
+<p>Relating Hyperbolic Braids and PSL(2,Z), by  <a href="./papers/2015/Weiss15.pdf">Cat Weiss</a></p>
+<p>Fully Augmented Links, by <a href="./papers/2015/Harnios15.pdf">John Harnios</a></p>
+<p>The Bracket Polynomial and Genus of Alternating Links, by <a href="./papers/2015/Novoa15.pdf">Karina Novoa</a></p>
+<p><strong>Summer 2014 Geometry Projects</strong></p>
+<p>Linearly Dependent Sets of Algebraic Curvature Tensors , by  <a href="./papers/Acevedo.pdf">Alberto Acevedo</a></p>
+<p>Linear Dependence of Canonical Algebraic Curvature Tensors of Symmetric and Anti-Symmetric Builds , by <a href="./papers/2014/McMahon14.pdf">Elise McMahon</a></p>
+<p>A Look at Constant Vector Curvature on Three-Dimensional Model Spaces according to the Curvature Tensor , by  <a href="./papers/2014/Thompson14.pdf">Albany Thompson</a></p>
+<p>Kernels of Canonical Algebraic Curvature Tensors , by <a href="./papers/2014/Williams14.pdf">Adam Williams</a></p>
+<p><strong>Summer 2014 Knot Theory Projects</strong></p>
+<p>On Relating Linking Number and Stick Number , by <a href="./papers/2014/Hsu14.pdf">Jackson Hsu</a></p>
+<p>Three-Variable Bracket Polynomial for Three Braid Knots and Links , by <a href="./papers/2014/Johnson14.pdf">Madeleine Johnson</a></p>
+<p>Recovering Link Data From the B-Graph of an Alternating Diagram , by <a href="./papers/2014/Miller14.pdf">Maggie Miller</a></p>
+<p>Three-Variable Bracket Polynomial for Algebraic Links , by  <a href="./papers/2014/Underwood14.pdf">Tyler Underwood</a></p>
+<p><strong>Summer 2013 Geometry Projects</strong></p>
+<p>Curvature homogeneity of type (1,3) in pseudo-Riemannian manifolds , <a href="./papers/McDonaldPaper.pdf">by Cullen McDonald</a></p>
+<p>The study of the constant vector curvature condition for model spaces in dimension three with positive definite inner product , <a href="./papers/MumfordPaper.pdf">by Kelci Mumford</a></p>
+<p>Structure groups of algebraic curvature tensors in dimension three , <a href="./papers/BeneishPaper.pdf">by Lea Beneish</a></p>
+<p><strong>Summer 2013 Knot Theory Projects</strong></p>
+<p>Torified Rational Links , <a href="./papers/BrintPaper.pdf">by Karly Brint</a></p>
+<p>The three-variable bracket polynomial for reduced, alternating links , <a href="./papers/LaffertyPaper.pdf">by Kelsey Lafferty</a></p>
+<p>Three-variable bracket polynomial for two-bridge knots , <a href="./papers/OverduinPaper.pdf">by Matthew Overduin</a></p>
+<p><strong>Summer 2012 Geometry Projects</strong></p>
+<p>Linear Dependence and Hermitian Geometric Realizations of Canonical Algebraic Curvature Tensors , <a href="./papers/DanDiroffJournal.pdf">by Dan Diroff</a></p>
+<p>Jordan Normal Forms for a Skew-Adjoint Operator in the Lorentzian Setting , <a href="./papers/2012/LS12.pdf">by Lily Saunders</a></p>
+<p>Is Every Invertible Linear Map in the Structure Group of some Algebraic Curvature Tensor? , <a href="./papers/2012/LK12.pdf">by Lisa Kaylor</a></p>
+<p>On the Computation and Dimension of Structure Groups of Algebraic Curvature Tensors , <a href="./papers/2012/MO12.pdf">by Malik Obeidin</a></p>
+<p>Signature Change and Linear Dependence of Curvature Tensors , <a href="./papers/2012/SS12.pdf">by Sarah Schmidt</a></p>
+<p><strong>Summer 2012 Knot Theory Projects</strong></p>
+<p>Ramsey Numbers and Other Knot Invariants , <a href="./papers/2012/MJ12.pdf">by Maribeth Johnson</a></p>
+<p>Structure of K Braid Satellites Within a Type K Torus , <a href="./papers/2012/ML12.pdf">by Michael Lessley</a></p>
+<p>Proving the absence of certain totally geodesic surfaces , <a href="./papers/2012/WS12.pdf">by Warren Shull</a></p>
+<p><strong>Summer 2011 Geometry Projects</strong></p>
+<p>Linear Independence of Sets of Three Algebraic Curvature Tensors , <a href="./papers/AwesomenessFINAL.pdf">by Britany Lovell</a></p>
+<p>On the Structure Groups of Decomposable Algebraic Curvature Tensors , <a href="./papers/ACTpaper.pdf">by Cole Franks</a></p>
+<p>Linearly Dependent Sets of Algebraic Curvature Tensors with a Nondegenerate Inner Product , <a href="./papers/2011/ES11.pdf">by Evan Smothers</a></p>
+<p>An Upper Bound on antisymmetric Algebraic Curvature Tensors , <a href="./papers/FINACT.pdf">by Joey Thomas</a></p>
+<p><strong>Summer 2011 Knot Theory Projects</strong></p>
+<p>Volume of Hyperbolic Closed 3-Braids , <a href="./papers/VolumeDRAFT.pdf">by Aly Bittner</a></p>
+<p>Linking Number of a Linear Embedding with Two Components , <a href="./papers/roughdraft.pdf">by Julie Wasiuk</a></p>
+<p>Classifying Closed Three- and Four-Braids as Hyperbolic , <a href="./papers/2011/MK11.pdf">by Marjorie Kasten</a></p>
+<p><strong>Summer 2010 Geometry Projects</strong></p>
+<p>Structure Groups of Pseudo-Riemannian Algebraic Curvature Tensors, <a href="./papers/2010/jp10.pdf">by Joseph Palmer</a></p>
+<p>Skew-Tsankov Algebraic Curvature Tensors in the Lorentzian setting, <a href="./papers/2010/kt10.pdf">by Kaetlin Taylor</a></p>
+<p>Algebraic Curvature Tensors and Antisymmetric Forms, <a href="./papers/2010/bt10.pdf">by Blake Treadway</a></p>
+<p><strong>Summer 2010 Knot Theory Projects</strong></p>
+<p>Second Twist Number of 2-bridge knots, <a href="./papers/2010/jc10.pdf">by Jessica Ceniceros</a></p>
+<p>Composing two non-tricolorable knots, <a href="./papers/2010/kh10.pdf">by Kelly Harlan</a></p>
+<p>Ropelength of Twists and Alternating Knots, <a href="./papers/2010/wk10.pdf">by William Kanegis</a></p>
+<p>Lower Bounds for the Ropelength of Reduced Conformations, <a href="./papers/2010/rm10.pdf">by Robert McGuigan</a></p>
+<p>Linear Ropelength upper bounds of twist knots, <a href="./papers/2010/ms10.pdf">by Michael Swearingin</a></p>
+<p><strong>Summer 2009 Geometry Projects</strong></p>
+<p>The linear independence of sets of two and three canonical algebraic curvature tensors, <a href="./papers/2009/ad09.pdf">by Alexander Diaz</a></p>
+<p>A Spanning Set for Algebraic Covariant Derivative Curvature Tensors, <a href="./papers/2009/bl09.pdf">by Bronson Lim</a></p>
+<p>Constructing Algebraic Curvature Tensors Using Symmetric Bilinear Forms, <a href="./papers/2009/jr09.pdf">by John Reynolds</a></p>
+<p>The decomposability of full and weak model spaces, <a href="./papers/2009/ds09.pdf">by Danielle Strieby</a></p>
+<p><strong>Summer 2009 Knot Theory Projects</strong></p>
+<p>Ropelength and Lissajous Diagrams, <a href="./papers/2009/ka09.pdf">by Katie Agle</a></p>
+<p>Ropelength, Connect-Sum, and Cabling of Paired Knots, <a href="./papers/2009/ja09.pdf">by Jessica Alley</a></p>
+<p>Lower bound for ropelength of m-almost alternating knots, <a href="./papers/2009/cm09.pdf">by Charley Mathes</a></p>
+<p>Dowker Notation and Arc Presentation, <a href="./papers/2009/jw09.pdf">by Jennifer Winters</a></p>
+<p><strong>Summer 2007 Knot Theory Projects</strong></p>
+<p>Convexity and Minimum Distance Energy, <a href="./papers/2007/rs07.pdf">by Rosanna Speller</a></p>
+<p>Ropelength of Braids and Tangle Decomposition of Knots, <a href="./papers/2007/sr07.pdf">by Sarah Ruether</a></p>
+<p>On Ropelength of Alternating Links, <a href="./papers/2007/ss07.pdf">by Shahla Sadjadi</a></p>
+<p>Summer 2007 Combinatorics Projects</p>
+<p>Tree Congestion for Complete n-Partite Graphs, <a href="./papers/2007/ac07.pdf">by Allen Cox</a></p>
+<p>Spanning Tree Congestion Critical Graphs, <a href="./papers/2007/dt07.pdf">by Daniel Tanner</a></p>
+<p>On Spanning Tree Congestion of Product Graphs, <a href="./papers/2007/rh07.pdf">by Rachel Hunter</a></p>
+<p>On 3-cyclic Cutwidth Critical Graphs, <a href="./papers/2007/ms07.pdf">by Matthew Straughn</a></p>
+<p>On 3-cyclic Bandwidth Critical Graphs, <a href>by Eric Bucher</a></p>
+<p><strong>Summer 2006 Knot Theory Projects</strong></p>
+<p>The Crossing Probability Knot Energy, <a href="./papers/2006/bm06.pdf">by Blake Mitchell</a></p>
+<p>Upper Bound for Ropelength of Pretzel Knots, <a href="./papers/2006/sm06.pdf">by Safiya Moran</a></p>
+<p>The Minimum Distance Energy and Midpoint Insertion, <a href="./papers/2006/sp06.pdf">by Stephanie Proksch</a></p>
+<p>The Minimum Distance Energy for Polygonal Unknots, <a href="./papers/2006/jt06.pdf">by Johanna Tam</a></p>
+<p>Summer 2006 Combinatorics Projects</p>
+<p>Two-Dimensional Bandwidth, <a href="./papers/2006/cd06.pdf">by Chris Duran</a></p>
+<p>Edge Bandwidth, <a href="./papers/2006/tb06.pdf">by Taijiro Bernstein</a></p>
+<p>3 and 4-Bandwidth Critical Graphs, <a href="./papers/2006/ak06.pdf">by Ann Kilzer</a></p>
+<p>Investigation of 4-Cutwidth Critical Tree Graphs and Complete Cyclic Cutwidth Critical Graphs, <a href="./papers/2006/rs06.pdf">by Ruffin Swain</a></p>
+<p><strong>Summer 2005 Knot Theory Projects</strong></p>
+<p>The Twist Numbers of Graphs and the Tutte Polynomial, <a href="./papers/2005/ta05.pdf">by Thomas Albertson</a></p>
+<p>An Upper Bound on Stick Numbers for Links, <a href="./papers/2005/ei05.pdf">by Erik Insko</a></p>
+<p>On the Second Twist Number, <a href="./papers/2005/gm05.pdf">by Gabriel Murillo</a></p>
+<p>Twist Numbers of Links from the Jones Polynomial, <a href="./papers/2005/mw05.pdf">by Matthew Williamson</a></p>
+<p>Summer 2005 Combinatorics Projects</p>
+<p>The Tree Congestion of Graphs, <a href="./papers/2005/dc05.pdf">by Diana Carr</a></p>
+<p>On the Cyclic Cutwidth of Complete Tripartite and n-Partite Graphs, <a href="./papers/2005/ha05.pdf">by Heather Allmond</a></p>
+<p>On 3-bandwidth Critical Graphs, <a href>by Holly Westerfield</a></p>
+<p>The Linear Cutwidth of Complete n-Partite Graphs, <a href="./papers/2005/cw05.pdf">by Chelsea Weitzel</a></p>
+<p><strong>Summer 2004 Knot Theory Projects</strong></p>
+<p>The Twisted Torus and Knots, <a href="./papers/2004/jb04.pdf">by Jenny Buontempo</a></p>
+<p>The Supercrossing Index of Torus Knots, <a href="./papers/2004/rp04.pdf">by Ryan Petitfils</a></p>
+<p>Knotted Ribbons and Ribbon Length, <a href="./papers/2004/ms04.pdf">by Maria Salcedo</a></p>
+<p>The Stick Number of Tr,4r, <a href="./papers/2004/iv04.pdf">by Ivan Ventura</a></p>
+<p>Summer 2004 Combinatorics Projects</p>
+<p>The Linear Cutwidth of Complete Bipartite and Tripartite Graphs, <a href="./papers/2004/sb04.pdf">by Stephanie Bowles</a></p>
+<p>The Linear and Cyclic Wirelength of Complete Bipartite Graphs, <a href="./papers/2004/lh04.pdf">by Liz Hartung</a></p>
+<p>On Tree Congestion of Graphs, <a href="./papers/2004/sh04.pdf">by Stephen Hruska</a></p>
+<p>Minimum Grid Cutwidth of Complete Bipartite Graphs, <a href="./papers/2004/kq04.pdf">by Karl Quick</a></p>
+<p><strong>Summer 2003 Knot Theory Projects</strong></p>
+<p>Star Move and Construction of a 10-Stick 11-Crossing Knot, <a href="./papers/2003/nd03.pdf">by Naomi Davis</a></p>
+<p>The n-iterated Clasp Move and Torus Links, <a href="./papers/2003/snm03.pdf">by Stacy Nicole Mills</a></p>
+<p>Iterated Clasp Move and Upper Bounds for 2-bridge Links, <a href="./papers/2003/tn03.pdf">by Tim Nawojski</a></p>
+<p>Self-Linking Number as a Geometric Invariant through Geo(8), <a href>by Joseph Rhoads</a></p>
+<p>Summer 2003 Combinatorics Projects</p>
+<p>The Cyclic Cutwidth of Qn, <a href="./papers/Qn.pdf">by Jason Erbele</a></p>
+<p>A Proof for the Cyclic Cutwidth of Q6, <a href>by Candi Castillo</a></p>
+<p>The Embedding of Complete Bipartite Graphs onto 2&#xB4;n Grids with Minimum Grid Cutwidth, <a href>by Carlos Ibarra</a></p>
+<p>The Cyclic Cutwidth of Complete Bipartite Graphs, <a href>by Megan Holben</a></p>
+<p><strong>Summer 2002 Knot Theory Projects</strong></p>
+<p>On the Lower Bounds of Ramsey Numbers of Knots, <a href="./papers/2002/jc02.pdf">by Joe Clark</a></p>
+<p>Knots in a Cubic Lattice, <a href="./papers/2002/mk02.pdf">by Marta Kobiela</a></p>
+<p>Stick Numbers of Links with Two Trivial Components, <a href="./papers/2002/am02.pdf">by Alexa Mater</a></p>
+<p>Summer 2002 Combinatorics Projects</p>
+<p>On Which Graphs Have Linear Cutwidth Equal to Cyclic Cutwidth, <a href>by Melissa Banister</a></p>
+<p>The Linear and Cyclic Cutwidth of the Complete Bipartite Graph, <a href="./papers/2002/mj02.pdf">by Matt Johnson</a></p>
+<p>Cutwidth of a Complete Graph embedded on an m &#xD7; n Grid, <a href="./papers/2002/bm02.pdf">by Brad Marchand</a></p>
+<p>Proof of the Grid Cutwidth for a Complete Graph, <a href>by Alvin Sacdalan</a></p>
+<p>The Cyclic Cutwidth of a P2 &#xD7; P2 &#xD7; P n Mesh, <a href="./papers/2002/vs02.pdf">by Victor Sciortino</a></p>
+<p><strong>Summer 2001 Knot Theory Projects</strong></p>
+<p>Clasping Within Polygonal Links, <a href>by Adam O&apos;Connor</a></p>
+<p>Minimum Stick Number for Knots and Links, <a href="./papers/2001/bp01.pdf">by Bart Podlesny</a></p>
+<p>Upper Bounds for the Stick Number of Three-Braids, <a href>by Nerissa Soriano</a></p>
+<p>Upper Bounds for the Stick Numbers of Three Braids, <a href>by Diana Wall</a></p>
+<p>Summer 2001 Combinatorics Projects</p>
+<p>A Proof for the Cyclic Cutwidth of Q5, by Ryan Aschenbrenner</p>
+<p>Bandwidths, Cutwidths, and Wirelengths of Complete Graphs of triangular and related numbers embedded on triangular lattice grid host graphs, by LeeAnn Feathers</p>
+<p>The cutwidth of the complete graph on 2n vertices when embedded into a 2&#xD7;n grid, by Annie Wang<br>
+<br class="clear"></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
